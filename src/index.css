@@ -116,6 +116,59 @@ body {
 
 
 
+.nav-hover-btn {
+  position: relative;
+  margin-inline-start: 2.5rem;
+  font-family: var(--font-general);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #eff6ff;
+  cursor: pointer;
+}
+
+.nav-hover-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  background-color: #262626;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.nav-hover-btn:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.dark .nav-hover-btn::after {
+  background-color: #ffffff;
+}
+
+.floating-nav {
+  background-color: #000000;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+.sword-man-clip-path {
+  clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
+}
+
+.contact-clip-path-1 {
+  clip-path: polygon(25% 0%, 74% 0, 69% 64%, 34% 73%);
+}
+.contact-clip-path-2 {
+  clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
+}
+
+
 @media (min-width: 640px) {
   .hero-heading {
     right: 2.5rem; 
